@@ -92,7 +92,11 @@ public class OtpProvider implements OtpSource {
     if (secret == null || secret.length() == 0) {
       throw new OtpSourceException("Null or empty secret");
     }
-
+    
+    //replacing visually similar characters 1 and 0
+    secret=secret.replace('1', 'I').replace('0', 'O');
+    //added later for safe side
+    
     try {
       Signer signer = Utilities.getSigningOracle(secret);
       PasscodeGenerator pcg = new PasscodeGenerator(signer,
