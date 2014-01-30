@@ -1,6 +1,5 @@
 #OTPGen
 Time and event based one time passcode generator library.
-
 ##Example Code
 	import net.tushar.util.otp.OtpProvider;
 	import net.tushar.util.otp.OtpSourceException;
