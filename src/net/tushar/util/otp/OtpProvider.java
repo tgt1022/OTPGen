@@ -119,4 +119,11 @@ public class OtpProvider implements OtpSource {
   /** Clock input for time-based OTPs (TOTP). */
   private final TotpClock mTotpClock;
   
+  public long getSecondsTillNextCounterValue(){
+	  long timeMilis = getTotpClock().currentTimeMillis();
+	  long secondsNow = Utilities.millisToSeconds(timeMilis);
+	  long currentValue =  getTotpCounter().getValueAtTime(secondsNow);
+	  long nextTimeSecs = getTotpCounter().getStartTimeAtValue(currentValue + 1);
+	  return nextTimeSecs-secondsNow;//nextValue-seconds;//nextValueStartTime - time;
+  }
 }

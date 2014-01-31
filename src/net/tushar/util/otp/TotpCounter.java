@@ -136,7 +136,7 @@ public class TotpCounter {
    *
    * @return earliest time instant (seconds since UNIX epoch) when the counter assumes the value.
    */
-  public long getValueStartTime(long value) {
+  public long getStartTimeAtValue(long value) {
     return mStartTime + (value * mTimeStep);
   }
 
