@@ -55,7 +55,7 @@ public class Utilities {
 	    return null;
 	  }
 
-	  private static byte[] decodeKey(String secret) throws DecodingException {
-	    return Base32String.decode(secret);
-	  }
+  private static byte[] decodeKey(String secret) throws DecodingException {
+	  return Base32String.decode(secret);
+  }
 }
