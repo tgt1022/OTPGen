@@ -16,7 +16,6 @@
 
 package net.tushar.util.otp;
 
-//import android.util.Log;
 
 import java.io.IOException;
 import java.util.Date;
